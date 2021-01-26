@@ -16,8 +16,8 @@
             <option>5357</option>
         </select>
         <fieldset>
-            <legend>When you visited</legend>
             <!-- Date and Time entry.  Date has a required minimum of January 1, 2021 -->
+            <legend>When you visited</legend>
             <label for="vDate">Date Visited</label>
             <input type="date" id="vDate" min="2021-01-01" >
             <label for="vTime">Time</label>
@@ -55,8 +55,9 @@
         <input type="checkbox" id="contact">
         <br>
         <!-- Password entry box.  Has a required length range-->
-        <label for="cusPassword">Please enter a password that is 5 to 10 characters in length:</label>
-        <input type="password" minlength="5" maxlength="10" style="width: 5em;" >
+        <label for="cusPassword">Please enter a password that is 5 to 10 characters in length.</label>
+        <input type="password" style="width: 5em;" pattern=".{5,10}" oninvalid="this.setCustomValidity('Please enter a password that is 5 to 10 characters in length.')" 
+        onchange="this.setCustomValidity('')">
         <br>
         <!-- Reset and Submit buttons -->
         <input type="reset">
